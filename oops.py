@@ -93,7 +93,7 @@ obj = Robot(Gekko)'''
 
 
 
-class Factory:
+'''class Factory:
     def __init__(self,materail,zips):
         self.materail = materail
         self.zips = zips
@@ -106,5 +106,51 @@ class BhopalFactory(Factory):
 class PuneFactory(BhopalFactory):
     def __init__(self,materail,zips,color,pockets):
         super().__init__(materail,zips,color)
-        self.pockets = pockets  
-        
+        self.pockets = pockets'''
+
+'''class Factory:
+    __a="Aditya"  #private attribute '__'
+
+    def show(self):
+        print("Hello Aditya")
+
+obj = Factory()
+obj.show()
+print(obj.__a)   #a can't be Ascessed outside the class due to private attribute'''
+
+'''from abc import ABC, abstractmethod
+
+class abstraction(ABC):
+    @abstractmethod
+    def perimeter(self):
+        pass
+
+    def area(self):
+        pass
+
+
+class Square(abstraction):
+    def __init__(self,side):
+        self.side = side
+    def perimeter(self):
+        print(f"Perimeter is {4*self.side}")        
+    def area(self):
+        print(f"Area is {self.side*self.side}") 
+
+class Circle(abstraction):
+    def __init__(self,radius):
+        self.radius = radius
+    def perimeter(self):
+        print(f"Perimeter is {2*3.14*self.radius}")
+    def area(self):
+        print(f"Area is {3.14*self.radius*self.radius}")
+
+obj = Circle(5)
+obj.perimeter()
+obj.area()
+
+obj2 = Square(4)
+obj2.perimeter()        
+obj2.area()'''
+
+
