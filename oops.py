@@ -153,4 +153,83 @@ obj2 = Square(4)
 obj2.perimeter()        
 obj2.area()'''
 
+'''class Animal:
+    @property
+    def show(self):
+        print("Helleo Animal")
 
+obj=Animal()
+obj.show
+'''
+
+
+'''def decorate(func):
+    def wrapper(*args,**kwargs):
+        print("Addition to your numbers")
+        func(*args,**kwargs)
+        print("Thankyou")
+    return wrapper
+@decorate
+
+def addition(a,b):
+    print(a+b)
+addition(12,8)'''
+
+
+'''def Addition(*args):
+    sum=0
+    for i in args:
+        sum=sum+i
+    print(sum)
+Addition(10,5,2,3,3,3,4,7,4,5,5,2,5)'''
+
+
+
+'''def information(**kwargs):
+    print("Your information is")
+    for i in kwargs:
+        print(f"{i} : {kwargs[i]}")
+
+information(name="Aditya", age=19, city="Panvel", profession="Student")'''
+
+
+
+'''l_even = [i for i in range(1,21) if i%2==0]
+print(l_even)
+
+l = {i:i**2 for i in range(1,11)}
+print(l)'''
+
+'''addition = lambda a,b: a+b
+print(addition(10,5))
+
+check_even = lambda x: "Even" if x%2==0 else "Odd"
+print(check_even(7))'''
+
+
+
+'''a =[1,2,3,4,5,6,7,8,9,10]
+def square(x):
+    return x**2
+result = map(square,a)
+
+print(list(result))'''
+
+'''def even(x):
+    if x%2==0:
+        return True
+    else:
+        return False
+    
+a =[1,2,3,4,5,6,7,8,9,10]
+result = filter(even,a)
+
+print(list(result))
+
+a=[1,2,3,4,5,6,7,8,9,10]
+result = filter(lambda x:True if x%2==0 else False,a)
+print(list(result))'''
+
+import maths  #importing maths.py file
+
+print(maths.addition(10,5))
