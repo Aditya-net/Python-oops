@@ -216,33 +216,44 @@ class Bank:
             print("Deletion cancelled.")
 
 
-# ---------- MAIN PROGRAM ----------
-Bank.load()
-user = Bank()
+def run_cli():
+    """Run the original terminal-based interface."""
+    Bank.load()
+    user = Bank()
+    while True:
+        print("\nWelcome to the Bank Management System")
+        print("-------------------------------------")
+        print("1. Create an account")
+        print("2. Deposit money")
+        print("3. Withdraw money")
+        print("4. Show account details")
+        print("5. Update account details")
+        print("6. Delete account")
+        print("7. Exit")
+        try:
+            choice = int(input("Enter your choice (1-7): "))
+        except ValueError:
+            print("Please enter a valid number.")
+            continue
+        if choice == 1:
+            user.Createaccount()
+        elif choice == 2:
+            user.depositmoney()
+        elif choice == 3:
+            user.withdrawmoney()
+        elif choice == 4:
+            user.showdetails()
+        elif choice == 5:
+            user.updatedetails()
+        elif choice == 6:
+            user.Delete()
+        elif choice == 7:
+            print("Thank you for using the Bank Management System.")
+            break
+        else:
+            print("Invalid choice.")
+        print("Thank you for using the Bank Management System.")
 
-print("\nWelcome to the Bank Management System")
-print("-------------------------------------")
-print("1. Create an account")
-print("2. Deposit money")
-print("3. Withdraw money")
-print("4. Show account details")
-print("5. Update account details")
-print("6. Delete account")
 
-choice = int(input("Enter your choice (1-6): "))
-
-if choice == 1:
-    user.Createaccount()
-elif choice == 2:
-    user.depositmoney()
-elif choice == 3:
-    user.withdrawmoney()
-elif choice == 4:
-    user.showdetails()
-elif choice == 5:
-    user.updatedetails()
-elif choice == 6:
-    user.Delete()
-else:
-    print("Invalid choice.")
-print("Thank you for using the Bank Management System.")
+if __name__ == "__main__":
+    run_cli()

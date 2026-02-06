@@ -6,5 +6,21 @@
         "pin": 4562,
         "accountNo": "q9vB3%6",
         "balance": 0
+    },
+    {
+        "name": "Aman Singh",
+        "age": 22,
+        "email": "amans@gmail.com",
+        "pin": 1919,
+        "accountNo": "j3z51#R",
+        "balance": 10000
+    },
+    {
+        "name": "Aryan",
+        "age": 25,
+        "email": "aryan@gmail.com",
+        "pin": 7894,
+        "accountNo": "7^7Z8AH",
+        "balance": 50000
     }
 ]
